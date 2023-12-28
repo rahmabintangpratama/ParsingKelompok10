@@ -1,0 +1,17 @@
+{
+  "subsystems": [
+    {
+      "model": [
+        {
+          "type": "class",
+          "class_name": "Car",
+          "KL": "C",
+          "Car_ASSIGNER": {
+            // Assigner state model harus memiliki KeyLetter yang tidak sesuai dengan aturan
+            "KeyLetter": "X_A"
+          }
+        }
+      ]
+    }
+  ]
+}

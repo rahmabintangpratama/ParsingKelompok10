@@ -1,0 +1,27 @@
+{
+  "subsystems": [
+    {
+      "model": [
+        {
+          "type": "class",
+          "class_name": "MyClass",
+          "KL": "A",
+          "MyClass_ASSIGNER": {
+            "KeyLetter": "A",
+            "states": [
+              {
+                "state_name": "State1",
+                "events": [
+                  {
+                    "event_name": "Event1",
+                    "targets": ["MyClass.SomeOtherState"]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

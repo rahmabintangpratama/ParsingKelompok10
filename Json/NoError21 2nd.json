@@ -1,0 +1,45 @@
+{
+  "subsystems": [
+    {
+      "model": [
+        {
+          "type": "class",
+          "class_name": "TIMER",
+          "KL": "TIM",
+          "timer_id": "1",
+          "instance_id": "1",
+          "event_label": "SetTimerEvent",
+          "time_remaining": "10",
+          "timer_status": "Active",
+          "TIM_ASSIGNER": {
+            "KeyLetter": "TIM",
+            "states": [
+              {
+                "state_name": "Idle",
+                "events": [
+                  {
+                    "event_name": "SetTimer",
+                    "targets": ["TIMER.SettingTimer"]
+                  }
+                ]
+              },
+              {
+                "state_name": "SettingTimer",
+                "events": [
+                  {
+                    "event_name": "ResetTimer",
+                    "targets": ["TIMER.Idle"]
+                  },
+                  {
+                    "event_name": "TimerExpired",
+                    "targets": ["TIMER.Idle"]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

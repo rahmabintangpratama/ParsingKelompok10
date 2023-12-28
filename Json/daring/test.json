@@ -1,0 +1,47 @@
+{
+	"type": "subsystem",
+	"sub_id": "s2",
+	"sub_name": "test",
+	"model": [
+        {
+			"type": "class",
+			"class_id": "11",
+			"class_name": "uji",
+			"KL": "uji",
+			"attributes": [
+				{
+					"attribute_type": "naming_attribute",
+					"attribute_name": "id",
+					"data_type": "id"
+				},
+				{
+					"attribute_type": "descriptive_attribute",
+					"attribute_name": "status",
+					"default_value": "uji.aktif",
+					"data_type": "state"
+				},
+				{
+					"attribute_type": "descriptive_attribute",
+					"attribute_name": "nama",
+					"data_type": "string"
+				}
+			],
+			"states": [
+				{
+					"state_id": "1",
+					"state_name": "resume",
+					"state_value": "resume",
+					"state_type": "string",
+					"state_event": ["setResume","onResume"]
+				},
+				{
+					"state_id": "2",
+					"state_name": "pause",
+					"state_value": "pause",
+					"state_type": "string",
+					"state_event": ["setPause", "onPause"]
+				}
+			]
+		}
+     ] 
+}

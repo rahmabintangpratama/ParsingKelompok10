@@ -1,0 +1,16 @@
+{
+  "subsystems": [
+    {
+      "model": [
+        {
+          "type": "class",
+          "class_name": "Person",
+          "KL": "P"
+          // Tidak ada assigner state model untuk objek "Person"
+          // Ini akan menyebabkan sintaks error number 16
+          // karena objek kelas harus memiliki assigner state model
+        }
+      ]
+    }
+  ]
+}

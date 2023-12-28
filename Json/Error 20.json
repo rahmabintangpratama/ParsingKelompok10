@@ -1,0 +1,30 @@
+{
+  "subsystems": [
+    {
+      "model": [
+        {
+          "type": "class",
+          "class_name": "ExampleClass1",
+          "KL": "A",
+          "ExampleClass1_ASSIGNER": {
+            "KeyLetter": "A",
+            "states": [
+              // State definitions here
+            ]
+          }
+        },
+        {
+          "type": "class",
+          "class_name": "ExampleClass2",
+          "KL": "A", // Duplicate KeyLetter
+          "ExampleClass2_ASSIGNER": {
+            "KeyLetter": "A",
+            "states": [
+              // State definitions here
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

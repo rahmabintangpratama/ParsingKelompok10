@@ -1,0 +1,8 @@
+{
+  "TIMER": {
+    "KeyLetter": "T" // Ini akan menyebabkan syntax error number 21 karena tidak memiliki sufiks "_A"
+  },
+  "TIMER_ASSIGNER": {
+    "KeyLetter": "T_B" // Ini juga akan menyebabkan syntax error number 21 karena sufiks bukan "_A"
+  }
+}
