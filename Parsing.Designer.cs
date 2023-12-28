@@ -35,6 +35,7 @@
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.lblSourceCode = new System.Windows.Forms.Label();
             this.lblOutput = new System.Windows.Forms.Label();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBrowse
@@ -103,11 +104,22 @@
             this.lblOutput.TabIndex = 6;
             this.lblOutput.Text = "Output:";
             // 
+            // btnHelp
+            // 
+            this.btnHelp.Location = new System.Drawing.Point(658, 455);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(130, 47);
+            this.btnHelp.TabIndex = 7;
+            this.btnHelp.Text = "Help";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // Parsing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 514);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.lblSourceCode);
             this.Controls.Add(this.textBoxOutput);
@@ -116,6 +128,8 @@
             this.Controls.Add(this.textBoxFilePath);
             this.Controls.Add(this.btnBrowse);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(822, 570);
+            this.MinimumSize = new System.Drawing.Size(822, 570);
             this.Name = "Parsing";
             this.Text = "Parsing";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -133,6 +147,7 @@
         private System.Windows.Forms.TextBox textBoxOutput;
         private System.Windows.Forms.Label lblSourceCode;
         private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
 

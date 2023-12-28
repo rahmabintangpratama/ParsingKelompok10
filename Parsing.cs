@@ -29,24 +29,6 @@ namespace Parsing
             this.Load += new EventHandler(Form1_Load);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        // Function to check uniqueness
-        private void CheckUniqueness(HashSet<string> collection, string key, string errorMessage)
-        {
-            if (collection.Contains(key))
-            {
-                HandleError(errorMessage);
-            }
-            else
-            {
-                collection.Add(key);
-            }
-        }
-
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -74,6 +56,36 @@ namespace Parsing
                 HandleError($"Error: {ex.Message}");
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            ShowHelpMessageBox();
+        }
+
+        private void ShowHelpMessageBox()
+        {
+            string helpMessage = GenerateHelpMessage();
+            MessageBox.Show(helpMessage, "User Guide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private string GenerateHelpMessage()
+        {
+            StringBuilder helpMessage = new StringBuilder();
+
+            helpMessage.AppendLine("User Guide for Parser:");
+            helpMessage.AppendLine();
+            helpMessage.AppendLine("1. Find JSON File:");
+            helpMessage.AppendLine("   - Click the 'Browse' button to locate and select the JSON file you want to check.");
+            helpMessage.AppendLine("   - After selecting the file, the file name will be displayed in the text area.");
+            helpMessage.AppendLine("2. Initiate Checking:");
+            helpMessage.AppendLine("   - After choosing the JSON file, click the 'Check' button to start the checking process.");
+            helpMessage.AppendLine("   - The JSON source code and the checking result will be displayed in the output text area.");
+            helpMessage.AppendLine("3. Interpret Checking Results:");
+            helpMessage.AppendLine("   - Review the checking results in the output text area.");
+            helpMessage.AppendLine("   - If there are errors, error messages will be provided to guide the corrections.");
+
+            return helpMessage.ToString();
         }
 
         private void HandleError(string errorMessage)
@@ -302,6 +314,11 @@ namespace Parsing
                     }
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
